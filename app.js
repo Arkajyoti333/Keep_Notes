@@ -61,7 +61,7 @@ const addNewNotes = (text=' ') => {
     }) 
     // element.addEventListener('click', function(event) {
     //     // The 'event' argument contains information about the click event.
-    //     // You can access event properties like event.target, event.type, etc.
+    //     // You can access event properties like event. target, event.type, etc.
     //     // Perform actions based on the event.
     // });
     btnDelete.addEventListener('click', () => {
@@ -86,7 +86,7 @@ if (returnNotesData) {
 
 
 // const returnNotesData=JSON.parse(localStorage.getItem('notesData'));
-// //  console.log(returnNotesData);
+//   console.log(returnNotesData);
 // if(returnNotesData){returnNotesData.forEach((note)=>addNewNotes(note))};
 
 
@@ -95,7 +95,6 @@ if (returnNotesData) {
 addNotesBtn.addEventListener('click', () => addNewNotes());
 
 
-// ${text}
 
 
 
@@ -103,63 +102,3 @@ addNotesBtn.addEventListener('click', () => addNewNotes());
 
 
 
-// const addNotesBtn = document.querySelector('#add');
-
-// // Function to store and update notes in local storage
-// const storeUpdateLocalStorageData = () => {
-//     const textAreaData = document.querySelectorAll('textarea');
-//     const notesData = [];
-//     textAreaData.forEach((note) => {
-//         notesData.push(note.value);
-//     });
-//     localStorage.setItem('notesData', JSON.stringify(notesData));
-// };
-
-// const addNewNotes = (text = '') => {
-//     const note = document.createElement('div');
-//     note.classList.add('note');
-
-//     const htmlData = `
-//         <div class="operation">
-//             <button title="edit" class="edit"><i class="fa-solid fa-user-pen"></i></button>
-//             <button title="delete" class="delete"><i class="fa-solid fa-trash"></i></button>
-//         </div>
-//         <div class="main ${text ? '' : 'hidden'}">${text}</div>  
-//         <textarea class="${text ? "hidden": " "}">${text}</textarea>
-//     `;
-
-//     note.insertAdjacentHTML('afterbegin', htmlData);
-//     document.body.appendChild(note);
-
-//     const btnEdit = note.querySelector('.edit');
-//     const btnDelete = note.querySelector('.delete');
-//     const tagMainDiv = note.querySelector('.main');
-//     const textArea = note.querySelector('textarea');
-
-//     btnEdit.addEventListener('click', () => {
-//         tagMainDiv.classList.toggle('hidden');
-//         textArea.classList.toggle('hidden');
-//     });
-
-//     textArea.addEventListener('change', (event) => {
-//         const userValue = event.target.value;
-//         tagMainDiv.innerHTML = userValue;
-//         storeUpdateLocalStorageData();
-//     });
-
-//     btnDelete.addEventListener('click', () => {
-//         note.remove();
-//         storeUpdateLocalStorageData();
-//     });
-// };
-
-// // Retrieve data from localStorage
-// const returnNotesData = JSON.parse(localStorage.getItem('notesData'));
-
-// if (returnNotesData) {
-//     returnNotesData.forEach((noteData) => {
-//         addNewNotes(noteData);
-//     });
-// }
-
-// addNotesBtn.addEventListener('click', () => addNewNotes());
